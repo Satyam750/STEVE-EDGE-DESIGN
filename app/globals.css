@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  overflow-x:hidden ;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,12 +17,66 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@font-face {
+  font-family:Mess ;
+  src: url(../malpani/MessinaSansWeb-Book.ttf);
+}
+@font-face {
+  font-family:Can ;
+  src: url(../malpani/Canela-Light-Web.ttf);
+}
+
+.mes{
+  font-family: Mess;
+}
+.can{
+  font-family: Can;
+}
+.page_2_btn{
+  font-weight: 600;
+  font-size: 2.85vw;
+  font-family: Mess;
+
+}
+
+.static {
+  position: absolute;
+  cursor: pointer;
+ }
+
+.static:hover {
+  opacity: 0;
+ }
+
+ .btn{
+  font-size: 2.2vw;
+  font-family: Mess;
+  font-weight: 500;
+
+ }
+
+ .active{
+  height: 4rem;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  transition: 0.3s linear;
+  display: flex;
+  justify-content:stretch;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  z-index: 40;
+  box-shadow: 0 2px 5px -1px rgba(0, 0, 0, .08);
+  /* padding: 0 7%; */
+}
+.hidden{
+  height: 4rem;
+  width: 100%;
+  z-index: 40;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  box-shadow: 0 2px 5px -1px rgba(0, 0, 0, .08);
+  position: fixed;
+  top: -80px;
+  transition: 0.3s linear;
+
 }
